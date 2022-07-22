@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convert images</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main>
+    <h1>Image convert and compress</h1>
+    <form id="form">
+      <div id="container_input-file">
+        <span id="fake-btn" class="btn">CHOOSE FILES</span>  
+        <span id="message_input-file">or drag and drop files here</span>
+        <input type="file" name="file" id="file-upload" multiple accept="image/*">
+      </div>
+      <div id="container_input-options">
+        <h3>Options:</h3>
+        <div id="percentage-compress" class="input-option">
+          <span class="title-section">Percentage to compress: </span>
+          <div>
+            <input type="range" list="tickmarks" id="percentage" step="10">
+            <strong id="percentage-text"></strong>
+            <datalist id="tickmarks">
+              <option value="0" label="0%">
+              <option value="10">
+              <option value="20">
+              <option value="30">
+              <option value="40">
+              <option value="50" label="50%">
+              <option value="60">
+              <option value="70">
+              <option value="80">
+              <option value="90">
+              <option value="100" label="100%">
+            </datalist>
+          </div>
+        </div>
+        <div id="format-to-convert" class="input-option">
+          <span class="title-section">Format: </span>
+          <select name="file-format" id="file-format">
+            <option value="png" selected>PNG</option>
+            <option value="jpg">JPG</option>
+            <option value="jpeg">JPEG</option>
+            <option value="gif">GIF</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn">Convertir</button>
+    </form>
+    <div id="container_message-info">
+      <div id="message-info">
+        <span></span>
+        <button id="btn-reset-form" class="btn">Ok</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
